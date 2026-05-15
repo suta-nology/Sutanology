@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUTA ADNYANA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+
+    <div class="intro" id="intro">
+      <div class="intro-content">
+        <p class="intro-label">Welcome to my profile</p>
+        <h1 class="intro-name">
+          <span class="line">SUTA</span>
+          <span class="line">ADNYANA</span>
+        </h1>
+        <p class="intro-sub">Frontend Dev &nbsp;·&nbsp; Video Editor &nbsp;·&nbsp; Designer</p>
+        <p class="intro-hint">Tap anywhere to enter</p>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <script>
+      const intro = document.getElementById('intro');
+      const fill  = document.getElementById('progressFill');
+      let   gone  = false;
+
+      function goToMain() {
+        if (gone) return;
+        gone = true;
+        intro.classList.add('exit');
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 700);
+      }
+
+      // Auto redirect setelah 3.5 detik
+      setTimeout(goToMain, 3500);
+
+      // Klik untuk langsung masuk
+      intro.addEventListener('click', goToMain);
+    </script>
+  </body>
+</html>
