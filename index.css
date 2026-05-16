@@ -18,7 +18,9 @@
   color: white;
   font-size: 20px;
   cursor: pointer;
-  transition: background 0.25s, transform 0.25s;
+  transition:
+    background 0.25s,
+    transform 0.25s;
   backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
@@ -44,7 +46,10 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px) scale(0.97);
-  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
   min-width: 160px;
   backdrop-filter: blur(16px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
@@ -69,8 +74,10 @@
   font-weight: 500;
   text-align: left;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  font-family: 'Poppins', sans-serif;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -573,7 +580,9 @@ body::before {
   font-size: 15px;
   color: var(--muted);
   flex-shrink: 0;
-  transition: color var(--ease), transform var(--ease);
+  transition:
+    color var(--ease),
+    transform var(--ease);
 }
 
 .project-item:hover .project-arrow {
