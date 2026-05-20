@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +18,19 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <!-- ======= STAR FIELD ======= -->
+    <div class="star-field" id="starField" aria-hidden="true"></div>
+
+    <!-- ======= THEME TOGGLE ======= -->
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      aria-label="Toggle dark/light mode"
+      title="Toggle theme"
+    >
+      🌙
+    </button>
+
     <!-- ======= LANGUAGE SWITCHER ======= -->
     <div class="lang-switcher">
       <button class="lang-trigger" id="langTrigger" title="Change Language">
@@ -35,13 +48,20 @@
     <!-- ======= HERO ======= -->
     <section class="hero">
       <div class="hero-left">
+        <!-- Sutanology brand mark -->
+        <div class="logo-emblem" aria-label="Sutanology">
+          <div class="logo-emblem-ring-2"></div>
+          <div class="logo-emblem-ring"></div>
+          <div class="logo-emblem-core">S</div>
+        </div>
+
         <span class="hero-tag" data-i18n="heroTag"
-          >Frontend Dev · Video Editor · Designer</span
+          >Vibe Coder · AI Builder · Creative</span
         >
         <h1 class="hero-name">SUTA<br />ADNYANA</h1>
         <p class="hero-desc" data-i18n="heroDesc">
-          Building things with code, editing frames, and designing visuals — one
-          creative day at a time.
+          I bring the vision. AI writes the code. Together, we build real
+          products — one creative idea at a time.
         </p>
         <div class="hero-actions">
           <button
@@ -69,10 +89,10 @@
         <span class="tag" data-i18n="aboutTag">About Me</span>
         <h2>I Nyoman Dwi Suta Adnyana</h2>
         <p data-i18n="aboutDesc">
-          A person who loves the world of IT, graphic design, and video editing.
-          Previously worked as a caregiver for 2 years and now focused on
-          building a career in technology &amp; creative fields. Believes that
-          AI is a partner, not an enemy, in creating.
+          A Vibe Coder who builds digital products using AI as the execution
+          engine. I bring the vision, product sense, and quality control — AI
+          handles the code. Previously worked as a caregiver in Japan for 2
+          years. Believes AI is a partner, not an enemy, in creating.
         </p>
       </div>
 
@@ -109,12 +129,13 @@
       <div class="card card-skills">
         <span class="tag" data-i18n="skillsTag">Skills</span>
         <div class="skill-tags">
-          <span>HTML / CSS</span>
-          <span>JavaScript</span>
+          <span data-i18n="skillVibe">Vibe Coding</span>
+          <span data-i18n="skillAI">AI-Assisted Dev</span>
+          <span data-i18n="skillProduct">Product Sense</span>
+          <span data-i18n="skillUI">UI Direction</span>
+          <span>Adobe Premiere Pro</span>
+          <span>Adobe Photoshop</span>
           <span data-i18n="skillVideo">Video Editing</span>
-          <span data-i18n="skillUI">UI Design</span>
-          <span>Figma</span>
-          <span>Photoshop</span>
         </div>
       </div>
 
@@ -200,13 +221,20 @@
 
       <!-- STATUS -->
       <div class="card card-status">
-        <span class="status-icon">🎸</span>
+        <span class="status-icon">⚡</span>
         <p class="status-text" data-i18n="statusText">
-          Currently: playing guitar, debugging code, watching anime, and
-          learning something new every day.
+          Currently: building with AI, editing videos, watching anime, and
+          proving that vision matters more than syntax.
         </p>
       </div>
     </main>
+
+    <!-- ======= PHOTO LIGHTBOX ======= -->
+    <div class="photo-lightbox" id="photoLightbox">
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <img src="Cat.jpg" class="lightbox-img" id="lightboxImg" alt="Suta Adnyana" />
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+    </div>
 
     <!-- ======= CONTACT MODAL ======= -->
     <div class="modal-overlay" id="contactModal">
@@ -254,181 +282,124 @@
 
       const i18n = {
         en: {
-          heroTag: "Frontend Dev · Video Editor · Designer",
-          heroDesc:
-            "Building things with code, editing frames, and designing visuals — one creative day at a time.",
-          contactBtn: "Contact Me",
-          aboutTag: "About Me",
-          aboutDesc:
-            "A person who loves the world of IT, graphic design, and video editing. Previously worked as a caregiver for 2 years and now focused on building a career in technology & creative fields. Believes that AI is a partner, not an enemy, in creating.",
-          hometown: "Hometown",
-          age: "24 years old",
-          langTag: "Languages",
-          lang1: "Indonesian",
-          lang2: "English (Daily)",
-          lang3: "Japanese N3",
-          skillsTag: "Skills",
-          skillVideo: "Video Editing",
-          skillUI: "UI Design",
+          heroTag:     "Vibe Coder · AI Builder · Creative",
+          heroDesc:    "I bring the vision. AI writes the code. Together, we build real products — one creative idea at a time.",
+          contactBtn:  "Contact Me",
+          aboutTag:    "About Me",
+          aboutDesc:   "A Vibe Coder who builds digital products using AI as the execution engine. I bring the vision, product sense, and quality control — AI handles the code. Previously worked as a caregiver in Japan for 2 years. Believes AI is a partner, not an enemy, in creating.",
+          hometown:    "Hometown",
+          age:         "24 years old",
+          langTag:     "Languages",
+          lang1:       "Indonesian",
+          lang2:       "English (Daily)",
+          lang3:       "Japanese N3",
+          skillsTag:   "Skills",
+          skillVibe:   "Vibe Coding",
+          skillAI:     "AI-Assisted Dev",
+          skillProduct:"Product Sense",
+          skillUI:     "UI Direction",
+          skillVideo:  "Video Editing",
           projectsTag: "Projects",
-          proj1: "My Profile",
-          proj2: "Suta Sensei",
-          proj3: "Fukuchan",
-          proj4: "SUTA 記録",
-          proj5: "Weekly To-Do",
-          proj6: "HIKARIEN",
+          proj1: "My Profile", proj2: "Suta Sensei", proj3: "Fukuchan",
+          proj4: "SUTA 記録", proj5: "Weekly To-Do", proj6: "HIKARIEN",
           here: "You're here",
-          statusText:
-            "Currently: playing guitar, debugging code, watching anime, and learning something new every day.",
-          modalTitle: "Get in Touch",
-          modalSub: "Feel free to reach out anytime.",
-          emailLabel: "Email",
-          phoneLabel: "Phone",
-          igLabel: "Instagram",
-          zoomIn: "click to zoom",
-          zoomOut: "click to close",
+          statusText:  "Currently: building with AI, editing videos, watching anime, and proving that vision matters more than syntax.",
+          modalTitle: "Get in Touch", modalSub: "Feel free to reach out anytime.",
+          emailLabel: "Email", phoneLabel: "Phone", igLabel: "Instagram",
+          zoomIn: "click to zoom", zoomOut: "click to close",
         },
 
         id: {
-          heroTag: "Frontend Dev · Video Editor · Desainer",
-          heroDesc:
-            "Membangun hal-hal dengan kode, mengedit frame, dan mendesain visual — satu hari kreatif dalam satu waktu.",
-          contactBtn: "Hubungi Saya",
-          aboutTag: "Tentang Saya",
-          aboutDesc:
-            "Seorang yang mencintai dunia IT, desain grafis, dan video editing. Pernah bekerja sebagai caregiver selama 2 tahun dan kini fokus membangun karir di bidang teknologi & kreatif. Percaya bahwa AI adalah partner, bukan musuh, dalam berkarya.",
-          hometown: "Kampung Halaman",
-          age: "24 tahun",
-          langTag: "Bahasa",
-          lang1: "Indonesia",
-          lang2: "Inggris (Percakapan)",
-          lang3: "Jepang N3",
-          skillsTag: "Keahlian",
-          skillVideo: "Edit Video",
-          skillUI: "Desain UI",
+          heroTag:     "Vibe Coder · AI Builder · Kreatif",
+          heroDesc:    "Saya membawa visi. AI menulis kodenya. Bersama, kami membangun produk nyata — satu ide kreatif dalam satu waktu.",
+          contactBtn:  "Hubungi Saya",
+          aboutTag:    "Tentang Saya",
+          aboutDesc:   "Seorang Vibe Coder yang membangun produk digital menggunakan AI sebagai mesin eksekusi. Saya membawa visi, product sense, dan quality control — AI yang mengerjakan kodenya. Pernah bekerja sebagai caregiver di Jepang selama 2 tahun. Percaya bahwa AI adalah partner, bukan musuh, dalam berkarya.",
+          hometown: "Kampung Halaman", age: "24 tahun", langTag: "Bahasa",
+          lang1: "Indonesia", lang2: "Inggris (Percakapan)", lang3: "Jepang N3",
+          skillsTag:   "Keahlian",
+          skillVibe:   "Vibe Coding",
+          skillAI:     "AI-Assisted Dev",
+          skillProduct:"Product Sense",
+          skillUI:     "UI Direction",
+          skillVideo:  "Edit Video",
           projectsTag: "Proyek",
-          proj1: "My Profile",
-          proj2: "Suta Sensei",
-          proj3: "Fukuchan",
-          proj4: "SUTA 記録",
-          proj5: "Weekly To-Do",
-          proj6: "HIKARIEN",
+          proj1: "My Profile", proj2: "Suta Sensei", proj3: "Fukuchan",
+          proj4: "SUTA 記録", proj5: "Weekly To-Do", proj6: "HIKARIEN",
           here: "Kamu di sini",
-          statusText:
-            "Saat ini: main gitar, debug kode, nonton anime, dan belajar sesuatu yang baru setiap hari.",
-          modalTitle: "Hubungi Saya",
-          modalSub: "Jangan sungkan untuk menghubungi saya.",
-          emailLabel: "Email",
-          phoneLabel: "Telepon",
-          igLabel: "Instagram",
-          zoomIn: "klik untuk zoom",
-          zoomOut: "klik untuk tutup",
+          statusText:  "Saat ini: membangun dengan AI, edit video, nonton anime, dan membuktikan bahwa visi lebih penting dari sintaks.",
+          modalTitle: "Hubungi Saya", modalSub: "Jangan sungkan untuk menghubungi saya.",
+          emailLabel: "Email", phoneLabel: "Telepon", igLabel: "Instagram",
+          zoomIn: "klik untuk zoom", zoomOut: "klik untuk tutup",
         },
 
         jp: {
-          heroTag: "フロントエンド開発 · 動画編集 · デザイナー",
-          heroDesc:
-            "コードでモノを作り、映像を編集し、ビジュアルをデザインする。毎日クリエイティブに。",
-          contactBtn: "連絡する",
-          aboutTag: "自己紹介",
-          aboutDesc:
-            "ITとグラフィックデザイン、動画編集が大好きな人間です。介護士として2年間働いた後、テクノロジーとクリエイティブの分野でキャリアを築くことに集中しています。AIは創造のパートナーだと信じています。",
-          hometown: "出身地",
-          age: "24歳",
-          langTag: "言語スキル",
-          lang1: "インドネシア語",
-          lang2: "英語（日常会話）",
-          lang3: "日本語 N3",
-          skillsTag: "スキル",
-          skillVideo: "動画編集",
-          skillUI: "UIデザイン",
+          heroTag:     "バイブコーダー · AI開発 · クリエイティブ",
+          heroDesc:    "ビジョンを持ち込み、AIがコードを書く。共に、本物のプロダクトを作り上げる。",
+          contactBtn: "連絡する", aboutTag: "自己紹介",
+          aboutDesc:   "AIを実行エンジンとして活用するバイブコーダーです。ビジョン・プロダクト感覚・品質管理を担当し、コードはAIに任せます。介護士として日本で2年間働いた経験があります。AIは創造のパートナーだと信じています。",
+          hometown: "出身地", age: "24歳", langTag: "言語スキル",
+          lang1: "インドネシア語", lang2: "英語（日常会話）", lang3: "日本語 N3",
+          skillsTag:   "スキル",
+          skillVibe:   "バイブコーディング",
+          skillAI:     "AI支援開発",
+          skillProduct:"プロダクトセンス",
+          skillUI:     "UIディレクション",
+          skillVideo:  "動画編集",
           projectsTag: "プロジェクト",
-          proj1: "マイプロフィール",
-          proj2: "スタ先生",
-          proj3: "福ちゃん",
-          proj4: "SUTA 記録",
-          proj5: "Weekly To-Do",
-          proj6: "HIKARIEN",
+          proj1: "マイプロフィール", proj2: "スタ先生", proj3: "福ちゃん",
+          proj4: "SUTA 記録", proj5: "Weekly To-Do", proj6: "HIKARIEN",
           here: "閲覧中",
-          statusText:
-            "現在：ギターを弾き、コードをデバッグし、アニメを見て、毎日新しいことを学んでいます。",
-          modalTitle: "お問い合わせ",
-          modalSub: "お気軽にご連絡ください。",
-          emailLabel: "メール",
-          phoneLabel: "電話番号",
-          igLabel: "インスタグラム",
-          zoomIn: "クリックで拡大",
-          zoomOut: "クリックで閉じる",
+          statusText:  "現在：AIで開発中、動画編集、アニメ視聴、ビジョンがシンタックスより大事と証明中。",
+          modalTitle: "お問い合わせ", modalSub: "お気軽にご連絡ください。",
+          emailLabel: "メール", phoneLabel: "電話番号", igLabel: "インスタグラム",
+          zoomIn: "クリックで拡大", zoomOut: "クリックで閉じる",
         },
 
         zh: {
-          heroTag: "前端开发 · 视频剪辑 · 设计师",
-          heroDesc: "用代码构建事物，剪辑影像，设计视觉——每天都充满创意。",
-          contactBtn: "联系我",
-          aboutTag: "关于我",
-          aboutDesc:
-            "我热爱IT、平面设计和视频剪辑。曾担任护理员2年，现专注于在科技与创意领域发展职业生涯。我相信AI是创作的伙伴，而不是敌人。",
-          hometown: "家乡",
-          age: "24岁",
-          langTag: "语言技能",
-          lang1: "印度尼西亚语",
-          lang2: "英语（日常会话）",
-          lang3: "日语 N3",
-          skillsTag: "技能",
-          skillVideo: "视频剪辑",
-          skillUI: "UI设计",
+          heroTag:     "Vibe Coder · AI开发者 · 创意",
+          heroDesc:    "我带来想法，AI编写代码。一起，我们打造真实的产品——每次一个创意。",
+          contactBtn: "联系我", aboutTag: "关于我",
+          aboutDesc:   "一名使用AI作为执行引擎构建数字产品的Vibe Coder。我负责愿景、产品感知和质量控制——AI负责代码。曾在日本担任护理员2年。相信AI是创作的伙伴，而不是敌人。",
+          hometown: "家乡", age: "24岁", langTag: "语言技能",
+          lang1: "印度尼西亚语", lang2: "英语（日常会话）", lang3: "日语 N3",
+          skillsTag:   "技能",
+          skillVibe:   "Vibe Coding",
+          skillAI:     "AI辅助开发",
+          skillProduct:"产品思维",
+          skillUI:     "UI方向把控",
+          skillVideo:  "视频剪辑",
           projectsTag: "项目",
-          proj1: "个人主页",
-          proj2: "日语学习应用",
-          proj3: "福酱网站",
-          proj4: "SUTA 記録",
-          proj5: "Weekly To-Do",
-          proj6: "HIKARIEN",
+          proj1: "个人主页", proj2: "日语学习应用", proj3: "福酱网站",
+          proj4: "SUTA 記録", proj5: "Weekly To-Do", proj6: "HIKARIEN",
           here: "您在此页",
-          statusText: "目前：弹吉他、调试代码、看动漫，每天学习新事物。",
-          modalTitle: "联系方式",
-          modalSub: "欢迎随时联系我。",
-          emailLabel: "邮箱",
-          phoneLabel: "电话",
-          igLabel: "Instagram",
-          zoomIn: "点击放大",
-          zoomOut: "点击关闭",
+          statusText:  "目前：用AI开发，剪辑视频，看动漫，证明愿景比语法更重要。",
+          modalTitle: "联系方式", modalSub: "欢迎随时联系我。",
+          emailLabel: "邮箱", phoneLabel: "电话", igLabel: "Instagram",
+          zoomIn: "点击放大", zoomOut: "点击关闭",
         },
 
         ko: {
-          heroTag: "프론트엔드 개발 · 영상 편집 · 디자이너",
-          heroDesc:
-            "코드로 무언가를 만들고, 영상을 편집하고, 비주얼을 디자인합니다 — 매일 창의적으로.",
-          contactBtn: "연락하기",
-          aboutTag: "소개",
-          aboutDesc:
-            "IT, 그래픽 디자인, 영상 편집을 사랑하는 사람입니다. 2년간 돌봄 종사자로 일한 후 현재는 기술 및 크리에이티브 분야에서 커리어를 쌓는 데 집중하고 있습니다. AI는 창작의 적이 아닌 파트너라고 믿습니다.",
-          hometown: "고향",
-          age: "24세",
-          langTag: "언어 능력",
-          lang1: "인도네시아어",
-          lang2: "영어 (일상 회화)",
-          lang3: "일본어 N3",
-          skillsTag: "기술",
-          skillVideo: "영상 편집",
-          skillUI: "UI 디자인",
+          heroTag:     "바이브 코더 · AI 개발자 · 크리에이티브",
+          heroDesc:    "저는 비전을 가져오고, AI가 코드를 작성합니다. 함께 진짜 제품을 만들어 갑니다.",
+          contactBtn: "연락하기", aboutTag: "소개",
+          aboutDesc:   "AI를 실행 엔진으로 활용해 디지털 제품을 만드는 바이브 코더입니다. 비전과 프로덕트 감각, 품질 관리를 담당하고 코드는 AI가 처리합니다. 일본에서 2년간 돌봄 종사자로 일했습니다. AI는 창작의 적이 아닌 파트너라고 믿습니다.",
+          hometown: "고향", age: "24세", langTag: "언어 능력",
+          lang1: "인도네시아어", lang2: "영어 (일상 회화)", lang3: "일본어 N3",
+          skillsTag:   "기술",
+          skillVibe:   "바이브 코딩",
+          skillAI:     "AI 지원 개발",
+          skillProduct:"프로덕트 센스",
+          skillUI:     "UI 디렉션",
+          skillVideo:  "영상 편집",
           projectsTag: "프로젝트",
-          proj1: "내 프로필",
-          proj2: "일본어 학습 앱",
-          proj3: "후쿠짱 사이트",
-          proj4: "SUTA 記録",
-          proj5: "Weekly To-Do",
-          proj6: "HIKARIEN",
+          proj1: "내 프로필", proj2: "일본어 학습 앱", proj3: "후쿠짱 사이트",
+          proj4: "SUTA 記録", proj5: "Weekly To-Do", proj6: "HIKARIEN",
           here: "현재 페이지",
-          statusText:
-            "현재: 기타 치기, 코드 디버깅, 애니메이션 시청, 매일 새로운 것 배우기.",
-          modalTitle: "연락처",
-          modalSub: "언제든지 연락 주세요.",
-          emailLabel: "이메일",
-          phoneLabel: "전화번호",
-          igLabel: "인스타그램",
-          zoomIn: "클릭하여 확대",
-          zoomOut: "클릭하여 닫기",
+          statusText:  "현재: AI로 개발 중, 영상 편집, 애니메이션 시청, 비전이 문법보다 중요하다는 것을 증명 중.",
+          modalTitle: "연락처", modalSub: "언제든지 연락 주세요.",
+          emailLabel: "이메일", phoneLabel: "전화번호", igLabel: "인스타그램",
+          zoomIn: "클릭하여 확대", zoomOut: "클릭하여 닫기",
         },
       };
 
@@ -453,8 +424,7 @@
           btn.classList.toggle("active", btn.dataset.lang === lang);
         });
 
-        // Update photo hint jika tidak sedang zoom
-        if (!zoomed) photoHint.textContent = t.zoomIn;
+        photoHint.textContent = t.zoomIn;
       }
 
       // =========================
@@ -482,19 +452,32 @@
       });
 
       // =========================
-      // PHOTO ZOOM
+      // PHOTO LIGHTBOX
       // =========================
 
-      const photo = document.getElementById("profilePhoto");
-      const photoHint = document.getElementById("photoHint");
-      let zoomed = false;
+      const photo        = document.getElementById("profilePhoto");
+      const photoHint    = document.getElementById("photoHint");
+      const lightbox     = document.getElementById("photoLightbox");
+      const lightboxBack = document.getElementById("lightboxBackdrop");
+      const lightboxBtn  = document.getElementById("lightboxClose");
 
-      photo.addEventListener("click", () => {
-        zoomed = !zoomed;
-        photo.classList.toggle("zoomed", zoomed);
-        photoHint.textContent = zoomed
-          ? i18n[currentLang].zoomOut
-          : i18n[currentLang].zoomIn;
+      function openLightbox() {
+        lightbox.classList.add("show");
+        document.body.style.overflow = "hidden";
+        photoHint.textContent = i18n[currentLang].zoomOut;
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("show");
+        document.body.style.overflow = "";
+        photoHint.textContent = i18n[currentLang].zoomIn;
+      }
+
+      photo.addEventListener("click", openLightbox);
+      lightboxBack.addEventListener("click", closeLightbox);
+      lightboxBtn.addEventListener("click", closeLightbox);
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
       });
 
       // =========================
@@ -524,10 +507,59 @@
         .addEventListener("click", (e) => e.preventDefault());
 
       // =========================
+      // DARK / LIGHT THEME
+      // =========================
+
+      const THEME_KEY = "sutaTheme";
+      let currentTheme = localStorage.getItem(THEME_KEY) || "dark";
+
+      function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        const btn = document.getElementById("themeToggle");
+        if (btn) btn.textContent = theme === "dark" ? "☀️" : "🌙";
+        localStorage.setItem(THEME_KEY, theme);
+        currentTheme = theme;
+      }
+
+      document.getElementById("themeToggle").addEventListener("click", () => {
+        applyTheme(currentTheme === "dark" ? "light" : "dark");
+      });
+
+      // =========================
+      // STAR FIELD
+      // =========================
+
+      function createStarField() {
+        const container = document.getElementById("starField");
+        if (!container) return;
+        const count = window.innerWidth > 768 ? 110 : 55;
+        for (let i = 0; i < count; i++) {
+          const star = document.createElement("div");
+          star.className = "star";
+          const size = Math.random() < 0.18 ? 2 : 1;
+          star.style.left = (Math.random() * 100).toFixed(2) + "%";
+          star.style.top = (Math.random() * 100).toFixed(2) + "%";
+          star.style.width = size + "px";
+          star.style.height = size + "px";
+          star.style.setProperty(
+            "--twinkle-dur",
+            (2.5 + Math.random() * 4.5).toFixed(2) + "s",
+          );
+          star.style.setProperty(
+            "--twinkle-delay",
+            (-Math.random() * 6).toFixed(2) + "s",
+          );
+          container.appendChild(star);
+        }
+      }
+
+      // =========================
       // INIT
       // =========================
 
+      applyTheme(currentTheme);
       applyLanguage(currentLang);
+      createStarField();
     </script>
   </body>
 </html>

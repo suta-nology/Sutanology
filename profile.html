@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="profileRoot">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,8 +13,18 @@
     <link rel="stylesheet" href="profile.css" />
   </head>
   <body>
+    <!-- Star field -->
+    <div class="star-field-intro" id="starFieldIntro" aria-hidden="true"></div>
+
     <div class="intro" id="intro">
       <div class="intro-content">
+        <!-- Logo emblem -->
+        <div class="intro-emblem">
+          <div class="intro-emblem-ring-2"></div>
+          <div class="intro-emblem-ring"></div>
+          <div class="intro-emblem-core">S</div>
+        </div>
+
         <p class="intro-label">Welcome to my profile</p>
         <h1 class="intro-name">
           <span class="line">SUTA</span>
@@ -32,8 +42,33 @@
     </div>
 
     <script>
+      // Apply saved theme
+      const savedTheme = localStorage.getItem("sutaTheme") || "dark";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+
+      // Stars
+      (function createStars() {
+        const c = document.getElementById("starFieldIntro");
+        if (!c) return;
+        const n = window.innerWidth > 768 ? 90 : 45;
+        for (let i = 0; i < n; i++) {
+          const s = document.createElement("div");
+          s.className = "star-intro";
+          const sz = Math.random() < 0.18 ? 2 : 1;
+          s.style.left = (Math.random() * 100).toFixed(2) + "%";
+          s.style.top = (Math.random() * 100).toFixed(2) + "%";
+          s.style.width = sz + "px";
+          s.style.height = sz + "px";
+          s.style.setProperty(
+            "--dur",
+            (2.5 + Math.random() * 4).toFixed(2) + "s",
+          );
+          s.style.setProperty("--delay", (-Math.random() * 5).toFixed(2) + "s");
+          c.appendChild(s);
+        }
+      })();
+
       const intro = document.getElementById("intro");
-      const fill = document.getElementById("progressFill");
       let gone = false;
 
       function goToMain() {
@@ -45,10 +80,7 @@
         }, 700);
       }
 
-      // Auto redirect setelah 3.5 detik
       setTimeout(goToMain, 3500);
-
-      // Klik untuk langsung masuk
       intro.addEventListener("click", goToMain);
     </script>
   </body>
