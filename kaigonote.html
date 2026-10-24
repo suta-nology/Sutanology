@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="KaigoNote: a Japanese short-stay care recording application. A project preview by Sutanology.">
+    <title>KaigoNote — Sutanology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="kaigonote.js" defer></script>
+  </head>
+  <body class="project-case">
+    <header class="case-nav">
+      <a href="index.html#projects" class="case-back"><span aria-hidden="true">←</span> <span data-case="back">Back to portfolio</span></a>
+      <div class="case-controls">
+        <select id="case-language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="id">Indonesia</option>
+          <option value="jp">日本語</option>
+          <option value="zh">中文</option>
+          <option value="ko">한국어</option>
+        </select>
+        <button id="case-theme" type="button" aria-label="Toggle dark/light mode">☀️</button>
+      </div>
+    </header>
+    <main>
+      <section class="case-intro">
+        <span class="tag" data-case="label">PROJECT 09 / CARE TECHNOLOGY</span>
+        <h1>Kaigo<span>Note</span></h1>
+        <p class="case-lead" data-case="lead">Clearer records. More connected care.</p>
+        <p class="case-description" data-case="description">A Japanese recording workspace for short-stay care facilities, designed around a simple flow: choose a resident, record their care, and share with the team.</p>
+        <div class="case-tags"><span>HTML · CSS · JavaScript</span><span>Node.js · SQLite</span><span data-case="responsive">Responsive UI</span></div>
+        <p class="case-status"><span aria-hidden="true"></span><span data-case="status">Local prototype. This page is a visual preview, not the live care application.</span></p>
+      </section>
+      <figure class="case-screenshot">
+        <div class="case-window" aria-hidden="true"><span></span><span></span><span></span><small>KaigoNote / Dashboard</small></div>
+        <a href="photos/kaigonote-dashboard.png" target="_blank" rel="noopener" data-case-title="enlarge" title="Open full-size preview"><img src="photos/kaigonote-dashboard.png" width="1440" height="1100" alt="KaigoNote dashboard showing fictional residents, care recording status, quick actions and team handovers."></a>
+        <figcaption data-case="caption">Dashboard preview with fictional sample data. Select the image to view it at full size.</figcaption>
+      </figure>
+      <section class="case-features" aria-label="Features">
+        <article><span class="case-number">01</span><h2 data-case="recordTitle">Everyday care records</h2><p data-case="recordBody">Meals, hydration, toileting, bathing, vital signs, medication, sleep, and activities in one workspace.</p></article>
+        <article><span class="case-number">02</span><h2 data-case="teamTitle">A shared team workflow</h2><p data-case="teamBody">Staff accounts, admin permissions, editable records, and handovers with individual acknowledgements in the local version.</p></article>
+        <article><span class="case-number">03</span><h2 data-case="accessTitle">Designed for everyday use</h2><p data-case="accessBody">Bright ocean-blue colors, larger text, clear controls, and a mobile card layout for staff of different ages.</p></article>
+      </section>
+      <section class="case-next"><div><h2 data-case="nextTitle">Explore the care company website</h2><p data-case="nextBody">KOMOREBIEN is the live Japanese–English care website, with a warm visual identity and simple navigation.</p></div><a href="https://komorebi-care.web.app/" class="btn-primary" target="_blank" rel="noopener noreferrer"><span data-case="visit">Visit KOMOREBIEN</span> <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="case-footer"><a href="index.html#projects">Sutanology <span aria-hidden="true">↗</span></a><span data-case="footer">Built around the people who use it.</span></footer>
+  </body>
+</html>
