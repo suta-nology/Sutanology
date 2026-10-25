@@ -3,3 +3,6 @@
 .project-case>.case-nav,.project-case>main,.project-case>.case-footer{position:relative;z-index:1}
 .case-creator{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:12px}.case-creator-mark{display:grid;place-items:center;width:24px;height:24px;border:1px solid var(--card-border);border-radius:7px;background:var(--tag-bg);font-weight:700}.case-creator strong{font-weight:600}.case-creator:hover strong{text-decoration:underline;text-underline-offset:4px}
 @media(prefers-reduced-motion:reduce){.project-case *{transition:none!important}}
+
+/* Japanese portfolio theme */
+.project-case{margin-inline:auto}.project-case>main{width:100%;margin:0}.project-case rt{font-size:max(.55em,9px)}.case-description,.case-features p{line-height:2.6}

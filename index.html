@@ -1,157 +1,53 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sutanology</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234f8fff'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins,sans-serif' font-size='18' font-weight='800' fill='white'>S</text></svg>"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <!-- ======= STAR FIELD ======= -->
-    <div class="star-field" id="starField" aria-hidden="true"></div>
-
-    <!-- ======= THEME TOGGLE ======= -->
-    <button
-      class="theme-toggle"
-      id="themeToggle"
-      aria-label="Toggle dark/light mode"
-      title="Toggle theme"
-    >
-      🌙
-    </button>
-
-    <!-- ======= LANGUAGE SWITCHER ======= -->
-    <div class="lang-switcher">
-      <button class="lang-trigger" id="langTrigger" title="Change Language">
-        🌐
-      </button>
-      <div class="lang-dropdown" id="langDropdown">
-        <button data-lang="en" class="lang-opt active">🇺🇸 English</button>
-        <button data-lang="id" class="lang-opt">🇮🇩 Indonesia</button>
-        <button data-lang="jp" class="lang-opt">🇯🇵 日本語</button>
-        <button data-lang="zh" class="lang-opt">🇨🇳 中文</button>
-        <button data-lang="ko" class="lang-opt">🇰🇷 한국어</button>
-      </div>
-    </div>
-
-    <!-- ======= HERO ======= -->
-    <section class="hero">
-      <div class="hero-left">
-        <!-- Sutanology brand mark -->
-        <div class="logo-emblem" aria-label="Sutanology">
-          <div class="logo-emblem-ring-2"></div>
-          <div class="logo-emblem-ring"></div>
-          <div class="logo-emblem-core">S</div>
-        </div>
-
-        <span class="hero-tag" data-i18n="heroTag"
-          >Vibe Coder · AI Builder · Creative</span
-        >
-        <h1 class="hero-name">SUTA<br />ADNYANA</h1>
-        <p class="hero-desc" data-i18n="heroDesc">
-          I bring the vision. AI writes the code. Together, we build real
-          products — one creative idea at a time.
-        </p>
-        <div class="hero-actions">
-          <button
-            class="btn-primary"
-            id="contactTrigger"
-            data-i18n="contactBtn"
-          >
-            Contact Me
-          </button>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="photo-wrapper">
-          <img src="Cat.jpg" alt="Suta Adnyana" id="profilePhoto" />
-          <span class="photo-hint" id="photoHint">click to zoom</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======= BENTO GRID ======= -->
-    <main class="bento">
-      <!-- ABOUT -->
-      <div class="card card-about">
-        <span class="tag" data-i18n="aboutTag">About Me</span>
-        <h2>I Nyoman Dwi Suta Adnyana</h2>
-        <p data-i18n="aboutDesc">
-          A Vibe Coder who builds digital products using AI as the execution
-          engine. I bring the vision, product sense, and quality control — AI
-          handles the code. Previously worked as a caregiver in Japan for 2
-          years. Believes AI is a partner, not an enemy, in creating.
-        </p>
-      </div>
-
-      <!-- ORIGIN -->
-      <div class="card card-origin">
-        <div class="card-icon">🌴</div>
-        <h3>Bali, Indonesia</h3>
-        <span class="muted-text" data-i18n="hometown">Hometown</span>
-        <div class="divider"></div>
-        <div class="card-icon small">🎂</div>
-        <span class="muted-text" data-i18n="age">24 years old</span>
-      </div>
-
-      <!-- LANGUAGE -->
-      <div class="card card-lang">
-        <span class="tag" data-i18n="langTag">Languages</span>
-        <div class="lang-list">
-          <div class="lang-row">
-            <span class="flag">🇮🇩</span
-            ><span data-i18n="lang1">Indonesian</span>
-          </div>
-          <div class="lang-row">
-            <span class="flag">🇬🇧</span
-            ><span data-i18n="lang2">English (Daily)</span>
-          </div>
-          <div class="lang-row">
-            <span class="flag">🇯🇵</span
-            ><span data-i18n="lang3">Japanese N3</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- SKILLS -->
-      <div class="card card-skills">
-        <span class="tag" data-i18n="skillsTag">Skills</span>
-        <div class="skill-tags">
-          <span data-i18n="skillVibe">Vibe Coding</span>
-          <span data-i18n="skillAI">AI-Assisted Dev</span>
-          <span data-i18n="skillProduct">Product Sense</span>
-          <span data-i18n="skillUI">UI Direction</span>
-          <span>Adobe Premiere Pro</span>
-          <span>Adobe Photoshop</span>
-          <span data-i18n="skillVideo">Video Editing</span>
-        </div>
-      </div>
-
-      <!-- PROJECTS -->
-      <div class="card card-projects" id="projects">
-        <span class="tag" data-i18n="projectsTag">Projects</span>
-        <div class="project-list">
-          <a href="#" class="project-item project-self">
+<html lang="ja" data-theme="light">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="SUTANOLOGY — I Nyoman Dwi Suta Adnyanaのポートフォリオ。AIとともに、日々の暮らしに寄り添うウェブサイトやアプリを制作しています。">
+ <meta name="theme-color" content="#f5f1e8">
+ <title>SUTANOLOGY — I Nyoman Dwi Suta Adnyana</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23ad382e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-size='26' fill='%23f5f1e8'%3ES%3C/text%3E%3C/svg%3E">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="home.css">
+ <script src="home.js" defer></script>
+</head>
+<body id="top">
+ <header class="site-header">
+  <a class="wordmark" href="#top"><span class="seal" aria-hidden="true">S</span>SUTANOLOGY</a>
+  <div class="header-controls">
+   <label class="language-control"><span aria-hidden="true">◎</span><select id="language" aria-label="言語 / Language"><option value="jp" selected>日本語</option><option value="id">Indonesia</option><option value="en">English</option><option value="zh">中文</option><option value="ko">한국어</option></select></label>
+   <button id="themeToggle" class="theme-toggle" type="button" aria-label="テーマを切り替え">◐</button>
+  </div>
+ </header>
+ <main>
+  <section class="hero" aria-labelledby="hero-name">
+   <div class="hero-art" aria-hidden="true"><span class="sun"></span><span class="mountain mountain-back"></span><span class="mountain mountain-front"></span><span class="art-caption">SUTANOLOGY / CREATIVE STUDIO</span></div>
+   <div class="hero-content">
+    <p class="eyebrow">PORTFOLIO & PERSONAL SPACE</p>
+    <h1 id="hero-name">SUTANOLOGY<span class="name">I Nyoman Dwi Suta Adnyana</span></h1>
+    <p class="hero-tag" data-i18n="heroTag">アイデアとAIで、ものづくり。</p> <p class="hero-desc" data-i18n="heroDesc"><ruby>想像<rp>（</rp><rt>そうぞう</rt><rp>）</rp></ruby>を、かたちに。AIとともに、<ruby>日々<rp>（</rp><rt>ひび</rt><rp>）</rp></ruby>の<ruby>暮<rp>（</rp><rt>く</rt><rp>）</rp></ruby>らしに<ruby>寄<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>り<ruby>添<rp>（</rp><rt>そ</rt><rp>）</rp></ruby>うデジタルプロダクトをつくっています。</p>
+    <div class="hero-actions"><a class="btn-primary" href="#projects"><span data-i18n="workLink"><ruby>作品<rp>（</rp><rt>さくひん</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>る</span> <span aria-hidden="true">↗</span></a><button class="btn-text" id="contactTrigger" type="button"><span data-i18n="contactBtn">お<ruby>問<rp>（</rp><rt>と</rt><rp>）</rp></ruby>い<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせ</span> <span aria-hidden="true">↗</span></button></div>
+   </div>
+   <div class="hero-foot"><span>01 — INTRODUCTION</span><span data-i18n="readingNote">ふりがなで、もっと<ruby>読<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>みやすく。</span></div>
+  </section>
+  <section class="about-section" id="about" aria-labelledby="about-heading">
+   <div class="section-heading"><span class="section-no">01 / ABOUT</span><h2 id="about-heading" data-i18n="aboutTag"><ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>について</h2></div>
+   <div class="about-grid">
+    <article class="about-story"><p class="small-label">THE PERSON BEHIND SUTANOLOGY</p><h3>I Nyoman Dwi<br>Suta Adnyana<span class="red-dot">.</span></h3><p class="about-desc" data-i18n="aboutDesc">インドネシア・バリ<ruby>島<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>出身<rp>（</rp><rt>しゅっしん</rt><rp>）</rp></ruby>のクリエイターです。アイデアとデザインを<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>え、AIとともにウェブサイトやアプリを<ruby>制作<rp>（</rp><rt>せいさく</rt><rp>）</rp></ruby>しています。<ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>で<ruby>介護<rp>（</rp><rt>かいご</rt><rp>）</rp></ruby>の<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>を２<ruby>年間<rp>（</rp><rt>ねんかん</rt><rp>）</rp></ruby><ruby>経験<rp>（</rp><rt>けいけん</rt><rp>）</rp></ruby>しました。<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>う<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>の<ruby>気持<rp>（</rp><rt>きも</rt><rp>）</rp></ruby>ちを<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>に、やさしく<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いやすいものづくりを<ruby>目指<rp>（</rp><rt>めざ</rt><rp>）</rp></ruby>しています。</p></article>
+    <div class="details"><div class="detail-row"><span class="detail-symbol" aria-hidden="true">⌖</span><div><p class="detail-label" data-i18n="hometown"><ruby>出身地<rp>（</rp><rt>しゅっしんち</rt><rp>）</rp></ruby></p> <p data-i18n="originName">インドネシア・バリ<ruby>島<rp>（</rp><rt>とう</rt><rp>）</rp></ruby></p></div></div><div class="detail-row"><span class="detail-symbol" aria-hidden="true">あ</span><div><p class="detail-label" data-i18n="langTag"><ruby>言語<rp>（</rp><rt>げんご</rt><rp>）</rp></ruby></p><div class="lang-list"><span data-i18n="lang1">インドネシア<ruby>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby></span> <span data-i18n="lang2"><ruby>英語<rp>（</rp><rt>えいご</rt><rp>）</rp></ruby>（<ruby>日常会話<rp>（</rp><rt>にちじょうかいわ</rt><rp>）</rp></ruby>）</span> <span data-i18n="lang3"><ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby> N3</span></div></div></div><div class="detail-row"><span class="detail-symbol" aria-hidden="true">＋</span><div><p class="detail-label" data-i18n="skillsTag">できること</p><div class="skill-tags"><span data-i18n="skillVibe">バイブコーディング</span><span data-i18n="skillAI">AIを<ruby>活用<rp>（</rp><rt>かつよう</rt><rp>）</rp></ruby>した<ruby>開発<rp>（</rp><rt>かいはつ</rt><rp>）</rp></ruby></span><span data-i18n="skillProduct">プロダクト<ruby>設計<rp>（</rp><rt>せっけい</rt><rp>）</rp></ruby></span><span data-i18n="skillUI">UIデザイン</span><span data-i18n="skillVideo"><ruby>動画編集<rp>（</rp><rt>どうがへんしゅう</rt><rp>）</rp></ruby></span><span>Adobe Premiere Pro</span><span>Adobe Photoshop</span></div></div></div></div>
+   </div>
+  </section>
+  <section class="work-section" id="projects" aria-labelledby="work-heading"><div class="section-heading"><span class="section-no">02 / SELECTED WORKS</span><h2 id="work-heading" data-i18n="projectsTag"><ruby>制作実績<rp>（</rp><rt>せいさくじっせき</rt><rp>）</rp></ruby></h2><span class="work-count">01 — 09</span></div><div class="project-list"><a href="#top" class="project-item project-self">
             <span class="project-num">01</span>
             <div class="project-info">
-              <span class="project-name" data-i18n="proj1">My Profile</span>
-              <span class="project-tech">HTML · CSS · JS</span>
+              <span class="project-name" data-i18n="proj1">このポートフォリオ</span>
+              <span class="project-tech" data-i18n="tech1">HTML · CSS · JavaScript</span>
             </div>
-            <span class="project-badge" data-i18n="here">You're here</span>
+            <span class="project-badge" data-i18n="here"><ruby>閲覧中<rp>（</rp><rt>えつらんちゅう</rt><rp>）</rp></ruby></span>
           </a>
-          <a
+<a
             href="https://sutasensei.vercel.app/"
             target="_blank"
             rel="noopener"
@@ -159,12 +55,12 @@
           >
             <span class="project-num">02</span>
             <div class="project-info">
-              <span class="project-name" data-i18n="proj2">Suta Sensei</span>
-              <span class="project-tech">Nihongo Learning App</span>
+              <span class="project-name" data-i18n="proj2">スタ<ruby>先生<rp>（</rp><rt>せんせい</rt><rp>）</rp></ruby></span>
+              <span class="project-tech" data-i18n="tech2"><ruby>日本語学習<rp>（</rp><rt>にほんごがくしゅう</rt><rp>）</rp></ruby>アプリ</span>
             </div>
             <span class="project-arrow">↗</span>
           </a>
-          <a
+<a
             href="https://fukuchandayo.netlify.app/"
             target="_blank"
             rel="noopener"
@@ -172,12 +68,12 @@
           >
             <span class="project-num">03</span>
             <div class="project-info">
-              <span class="project-name" data-i18n="proj3">Fukuchan</span>
-              <span class="project-tech">Cat Memorial Site</span>
+              <span class="project-name" data-i18n="proj3">ふくちゃん</span>
+              <span class="project-tech" data-i18n="tech3"><ruby>愛猫<rp>（</rp><rt>あいびょう</rt><rp>）</rp></ruby>のメモリアルサイト</span>
             </div>
             <span class="project-arrow">↗</span>
           </a>
-          <a
+<a
             href="https://suta-kiroku.netlify.app/"
             target="_blank"
             rel="noopener"
@@ -185,12 +81,12 @@
           >
             <span class="project-num">04</span>
             <div class="project-info">
-              <span class="project-name" data-i18n="proj4">SUTA 記録</span>
-              <span class="project-tech">Daycare Record App</span>
+              <span class="project-name" data-i18n="proj4">SUTA <ruby>記録<rp>（</rp><rt>きろく</rt><rp>）</rp></ruby></span>
+              <span class="project-tech" data-i18n="tech4">デイサービスの<ruby>記録<rp>（</rp><rt>きろく</rt><rp>）</rp></ruby>アプリ</span>
             </div>
             <span class="project-arrow">↗</span>
           </a>
-          <a
+<a
             href="https://mirailist.vercel.app/"
             target="_blank"
             rel="noopener"
@@ -199,11 +95,11 @@
             <span class="project-num">05</span>
             <div class="project-info">
               <span class="project-name" data-i18n="proj5">Mirailist</span>
-              <span class="project-tech">Task Manager · 未来リスト</span>
+              <span class="project-tech" data-i18n="tech5"><ruby>毎日<rp>（</rp><rt>まいにち</rt><rp>）</rp></ruby>のタスク<ruby>管理<rp>（</rp><rt>かんり</rt><rp>）</rp></ruby></span>
             </div>
             <span class="project-arrow">↗</span>
           </a>
-          <a
+<a
             href="https://hikarien.vercel.app/"
             target="_blank"
             rel="noopener"
@@ -212,11 +108,11 @@
             <span class="project-num">06</span>
             <div class="project-info">
               <span class="project-name" data-i18n="proj6">HIKARIEN</span>
-              <span class="project-tech">Care Facility Web · Japanese</span>
+              <span class="project-tech" data-i18n="tech6"><ruby>介護施設<rp>（</rp><rt>かいごしせつ</rt><rp>）</rp></ruby>のウェブサイト</span>
             </div>
             <span class="project-arrow">↗</span>
           </a>
-          <a
+<a
             href="https://gethabitforge.vercel.app/login"
             target="_blank"
             rel="noopener"
@@ -225,11 +121,11 @@
             <span class="project-num">07</span>
             <div class="project-info">
               <span class="project-name" data-i18n="proj7">Habit Forge</span>
-              <span class="project-tech">Habit & Task Tracker · Next.js</span>
+              <span class="project-tech" data-i18n="tech7"><ruby>習慣<rp>（</rp><rt>しゅうかん</rt><rp>）</rp></ruby>・タスク<ruby>管理<rp>（</rp><rt>かんり</rt><rp>）</rp></ruby></span>
             </div>
             <span class="project-arrow">↗</span>
           </a>
-          <a
+<a
             href="https://komorebi-care.web.app/"
             target="_blank"
             rel="noopener noreferrer"
@@ -238,458 +134,23 @@
             <span class="project-num">08</span>
             <div class="project-info">
               <span class="project-name" data-i18n="proj8">KOMOREBIEN</span>
-              <span class="project-tech" data-i18n="proj8Desc">Bilingual Japanese Care Website</span>
+              <span class="project-tech" data-i18n="proj8Desc"><ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>・<ruby>英語<rp>（</rp><rt>えいご</rt><rp>）</rp></ruby>の<ruby>介護施設<rp>（</rp><rt>かいごしせつ</rt><rp>）</rp></ruby>サイト</span>
             </div>
-            <span class="project-badge" data-i18n="projectLive">Live</span>
+            <span class="project-badge" data-i18n="projectLive"><ruby>公開中<rp>（</rp><rt>こうかいちゅう</rt><rp>）</rp></ruby></span>
             <span class="project-arrow" aria-hidden="true">↗</span>
           </a>
-          <a href="kaigonote.html" class="project-item">
+<a href="kaigonote.html" class="project-item">
             <span class="project-num">09</span>
             <div class="project-info">
               <span class="project-name" data-i18n="proj9">KaigoNote</span>
-              <span class="project-tech" data-i18n="proj9Desc">Short-Stay Care Records · Local Prototype</span>
+              <span class="project-tech" data-i18n="proj9Desc">ショートステイの<ruby>介護記録<rp>（</rp><rt>かいごきろく</rt><rp>）</rp></ruby>アプリ</span>
             </div>
-            <span class="project-badge" data-i18n="projectPreview">Preview</span>
+            <span class="project-badge" data-i18n="projectPreview">プレビュー</span>
             <span class="project-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- STATUS -->
-      <div class="card card-status">
-        <span class="status-icon">⚡</span>
-        <p class="status-text" data-i18n="statusText">
-          Currently: building with AI, editing videos, watching anime, and
-          proving that vision matters more than syntax.
-        </p>
-      </div>
-    </main>
-
-    <!-- ======= PHOTO LIGHTBOX ======= -->
-    <div class="photo-lightbox" id="photoLightbox">
-      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
-      <img
-        src="Cat.jpg"
-        class="lightbox-img"
-        id="lightboxImg"
-        alt="Suta Adnyana"
-      />
-      <button class="lightbox-close" id="lightboxClose">✕</button>
-    </div>
-
-    <!-- ======= CONTACT MODAL ======= -->
-    <div class="modal-overlay" id="contactModal">
-      <div class="modal-box">
-        <button class="modal-close" id="modalClose">✕</button>
-        <h2 data-i18n="modalTitle">Get in Touch</h2>
-        <p class="modal-sub" data-i18n="modalSub">
-          Feel free to reach out anytime.
-        </p>
-        <div class="contact-list">
-          <div class="contact-row">
-            <span class="contact-icon">✉</span>
-            <div>
-              <span class="contact-label" data-i18n="emailLabel">Email</span>
-              <span class="contact-val">komangsuta187@gmail.com</span>
-            </div>
-          </div>
-          <div class="contact-row">
-            <span class="contact-icon">📱</span>
-            <div>
-              <span class="contact-label" data-i18n="phoneLabel">Phone</span>
-              <span class="contact-val">070-9452-0550</span>
-            </div>
-          </div>
-          <a
-            href="https://www.instagram.com/stillsuta_"
-            target="_blank"
-            rel="noopener"
-            class="contact-row contact-row-link"
-          >
-            <span class="contact-icon">📸</span>
-            <div>
-              <span class="contact-label" data-i18n="igLabel">Instagram</span>
-              <span class="contact-val">@stillsuta_ ↗</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      // =========================
-      // DATA TERJEMAHAN
-      // =========================
-
-      const i18n = {
-        en: {
-          heroTag: "Vibe Coder · AI Builder · Creative",
-          heroDesc:
-            "I bring the vision. AI writes the code. Together, we build real products — one creative idea at a time.",
-          contactBtn: "Contact Me",
-          aboutTag: "About Me",
-          aboutDesc:
-            "A Vibe Coder who builds digital products using AI as the execution engine. I bring the vision, product sense, and quality control — AI handles the code. Previously worked as a caregiver in Japan for 2 years. Believes AI is a partner, not an enemy, in creating.",
-          hometown: "Hometown",
-          age: "24 years old",
-          langTag: "Languages",
-          lang1: "Indonesian",
-          lang2: "English (Daily)",
-          lang3: "Japanese N3",
-          skillsTag: "Skills",
-          skillVibe: "Vibe Coding",
-          skillAI: "AI-Assisted Dev",
-          skillProduct: "Product Sense",
-          skillUI: "UI Direction",
-          skillVideo: "Video Editing",
-          projectsTag: "Projects",
-          proj1: "My Profile",
-          proj2: "Suta Sensei",
-          proj3: "Fukuchan",
-          proj4: "SUTA 記録",
-          proj5: "Mirailist",
-          proj6: "HIKARIEN", proj7: "Habit Forge",
-          proj8: "KOMOREBIEN", proj8Desc: "Bilingual Japanese Care Website",
-          proj9: "KaigoNote", proj9Desc: "Short-Stay Care Records · Local Prototype",
-          projectLive: "Live", projectPreview: "Preview",
-          here: "You're here",
-          statusText:
-            "Currently: building with AI, editing videos, watching anime, and proving that vision matters more than syntax.",
-          modalTitle: "Get in Touch",
-          modalSub: "Feel free to reach out anytime.",
-          emailLabel: "Email",
-          phoneLabel: "Phone",
-          igLabel: "Instagram",
-          zoomIn: "click to zoom",
-          zoomOut: "click to close",
-        },
-
-        id: {
-          heroTag: "Vibe Coder · AI Builder · Kreatif",
-          heroDesc:
-            "Saya membawa visi. AI menulis kodenya. Bersama, kami membangun produk nyata — satu ide kreatif dalam satu waktu.",
-          contactBtn: "Hubungi Saya",
-          aboutTag: "Tentang Saya",
-          aboutDesc:
-            "Seorang Vibe Coder yang membangun produk digital menggunakan AI sebagai mesin eksekusi. Saya membawa visi, product sense, dan quality control — AI yang mengerjakan kodenya. Pernah bekerja sebagai caregiver di Jepang selama 2 tahun. Percaya bahwa AI adalah partner, bukan musuh, dalam berkarya.",
-          hometown: "Kampung Halaman",
-          age: "24 tahun",
-          langTag: "Bahasa",
-          lang1: "Indonesia",
-          lang2: "Inggris (Percakapan)",
-          lang3: "Jepang N3",
-          skillsTag: "Keahlian",
-          skillVibe: "Vibe Coding",
-          skillAI: "AI-Assisted Dev",
-          skillProduct: "Product Sense",
-          skillUI: "UI Direction",
-          skillVideo: "Edit Video",
-          projectsTag: "Proyek",
-          proj1: "My Profile",
-          proj2: "Suta Sensei",
-          proj3: "Fukuchan",
-          proj4: "SUTA 記録",
-          proj5: "Mirailist",
-          proj6: "HIKARIEN", proj7: "Habit Forge",
-          proj8: "KOMOREBIEN", proj8Desc: "Website Kaigo · Jepang & Inggris",
-          proj9: "KaigoNote", proj9Desc: "Catatan Care Short-Stay · Prototipe Lokal",
-          projectLive: "Online", projectPreview: "Pratinjau",
-          here: "Kamu di sini",
-          statusText:
-            "Saat ini: membangun dengan AI, edit video, nonton anime, dan membuktikan bahwa visi lebih penting dari sintaks.",
-          modalTitle: "Hubungi Saya",
-          modalSub: "Jangan sungkan untuk menghubungi saya.",
-          emailLabel: "Email",
-          phoneLabel: "Telepon",
-          igLabel: "Instagram",
-          zoomIn: "klik untuk zoom",
-          zoomOut: "klik untuk tutup",
-        },
-
-        jp: {
-          heroTag: "バイブコーダー · AI開発 · クリエイティブ",
-          heroDesc:
-            "ビジョンを持ち込み、AIがコードを書く。共に、本物のプロダクトを作り上げる。",
-          contactBtn: "連絡する",
-          aboutTag: "自己紹介",
-          aboutDesc:
-            "AIを実行エンジンとして活用するバイブコーダーです。ビジョン・プロダクト感覚・品質管理を担当し、コードはAIに任せます。介護士として日本で2年間働いた経験があります。AIは創造のパートナーだと信じています。",
-          hometown: "出身地",
-          age: "24歳",
-          langTag: "言語スキル",
-          lang1: "インドネシア語",
-          lang2: "英語（日常会話）",
-          lang3: "日本語 N3",
-          skillsTag: "スキル",
-          skillVibe: "バイブコーディング",
-          skillAI: "AI支援開発",
-          skillProduct: "プロダクトセンス",
-          skillUI: "UIディレクション",
-          skillVideo: "動画編集",
-          projectsTag: "プロジェクト",
-          proj1: "マイプロフィール",
-          proj2: "スタ先生",
-          proj3: "福ちゃん",
-          proj4: "SUTA 記録",
-          proj5: "Mirailist",
-          proj6: "HIKARIEN", proj7: "Habit Forge",
-          proj8: "こもれび苑", proj8Desc: "日本語・英語対応の介護施設サイト",
-          proj9: "KaigoNote", proj9Desc: "短期入所の介護記録 · ローカル試作版",
-          projectLive: "公開中", projectPreview: "プレビュー",
-          here: "閲覧中",
-          statusText:
-            "現在：AIで開発中、動画編集、アニメ視聴、ビジョンがシンタックスより大事と証明中。",
-          modalTitle: "お問い合わせ",
-          modalSub: "お気軽にご連絡ください。",
-          emailLabel: "メール",
-          phoneLabel: "電話番号",
-          igLabel: "インスタグラム",
-          zoomIn: "クリックで拡大",
-          zoomOut: "クリックで閉じる",
-        },
-
-        zh: {
-          heroTag: "Vibe Coder · AI开发者 · 创意",
-          heroDesc:
-            "我带来想法，AI编写代码。一起，我们打造真实的产品——每次一个创意。",
-          contactBtn: "联系我",
-          aboutTag: "关于我",
-          aboutDesc:
-            "一名使用AI作为执行引擎构建数字产品的Vibe Coder。我负责愿景、产品感知和质量控制——AI负责代码。曾在日本担任护理员2年。相信AI是创作的伙伴，而不是敌人。",
-          hometown: "家乡",
-          age: "24岁",
-          langTag: "语言技能",
-          lang1: "印度尼西亚语",
-          lang2: "英语（日常会话）",
-          lang3: "日语 N3",
-          skillsTag: "技能",
-          skillVibe: "Vibe Coding",
-          skillAI: "AI辅助开发",
-          skillProduct: "产品思维",
-          skillUI: "UI方向把控",
-          skillVideo: "视频剪辑",
-          projectsTag: "项目",
-          proj1: "个人主页",
-          proj2: "日语学习应用",
-          proj3: "福酱网站",
-          proj4: "SUTA 記録",
-          proj5: "Mirailist",
-          proj6: "HIKARIEN", proj7: "Habit Forge",
-          proj8: "KOMOREBIEN", proj8Desc: "日英双语护理机构网站",
-          proj9: "KaigoNote", proj9Desc: "短期入住护理记录 · 本地原型",
-          projectLive: "已上线", projectPreview: "预览",
-          here: "您在此页",
-          statusText:
-            "目前：用AI开发，剪辑视频，看动漫，证明愿景比语法更重要。",
-          modalTitle: "联系方式",
-          modalSub: "欢迎随时联系我。",
-          emailLabel: "邮箱",
-          phoneLabel: "电话",
-          igLabel: "Instagram",
-          zoomIn: "点击放大",
-          zoomOut: "点击关闭",
-        },
-
-        ko: {
-          heroTag: "바이브 코더 · AI 개발자 · 크리에이티브",
-          heroDesc:
-            "저는 비전을 가져오고, AI가 코드를 작성합니다. 함께 진짜 제품을 만들어 갑니다.",
-          contactBtn: "연락하기",
-          aboutTag: "소개",
-          aboutDesc:
-            "AI를 실행 엔진으로 활용해 디지털 제품을 만드는 바이브 코더입니다. 비전과 프로덕트 감각, 품질 관리를 담당하고 코드는 AI가 처리합니다. 일본에서 2년간 돌봄 종사자로 일했습니다. AI는 창작의 적이 아닌 파트너라고 믿습니다.",
-          hometown: "고향",
-          age: "24세",
-          langTag: "언어 능력",
-          lang1: "인도네시아어",
-          lang2: "영어 (일상 회화)",
-          lang3: "일본어 N3",
-          skillsTag: "기술",
-          skillVibe: "바이브 코딩",
-          skillAI: "AI 지원 개발",
-          skillProduct: "프로덕트 센스",
-          skillUI: "UI 디렉션",
-          skillVideo: "영상 편집",
-          projectsTag: "프로젝트",
-          proj1: "내 프로필",
-          proj2: "일본어 학습 앱",
-          proj3: "후쿠짱 사이트",
-          proj4: "SUTA 記録",
-          proj5: "Mirailist",
-          proj6: "HIKARIEN", proj7: "Habit Forge",
-          proj8: "KOMOREBIEN", proj8Desc: "일본어·영어 지원 돌봄 시설 웹사이트",
-          proj9: "KaigoNote", proj9Desc: "단기 입소 돌봄 기록 · 로컬 프로토타입",
-          projectLive: "공개 중", projectPreview: "미리보기",
-          here: "현재 페이지",
-          statusText:
-            "현재: AI로 개발 중, 영상 편집, 애니메이션 시청, 비전이 문법보다 중요하다는 것을 증명 중.",
-          modalTitle: "연락처",
-          modalSub: "언제든지 연락 주세요.",
-          emailLabel: "이메일",
-          phoneLabel: "전화번호",
-          igLabel: "인스타그램",
-          zoomIn: "클릭하여 확대",
-          zoomOut: "클릭하여 닫기",
-        },
-      };
-
-      // =========================
-      // APPLY LANGUAGE
-      // =========================
-
-      let currentLang = localStorage.getItem("profileLang") || "en";
-
-      function applyLanguage(lang) {
-        currentLang = lang;
-        localStorage.setItem("profileLang", lang);
-        const t = i18n[lang];
-
-        document.querySelectorAll("[data-i18n]").forEach((el) => {
-          const key = el.dataset.i18n;
-          if (t[key] !== undefined) el.textContent = t[key];
-        });
-
-        // Update active button in dropdown
-        document.querySelectorAll(".lang-opt").forEach((btn) => {
-          btn.classList.toggle("active", btn.dataset.lang === lang);
-        });
-
-        photoHint.textContent = t.zoomIn;
-      }
-
-      // =========================
-      // LANGUAGE SWITCHER
-      // =========================
-
-      const langTrigger = document.getElementById("langTrigger");
-      const langDropdown = document.getElementById("langDropdown");
-
-      langTrigger.addEventListener("click", (e) => {
-        e.stopPropagation();
-        langDropdown.classList.toggle("show");
-      });
-
-      document.addEventListener("click", () =>
-        langDropdown.classList.remove("show"),
-      );
-      langDropdown.addEventListener("click", (e) => e.stopPropagation());
-
-      document.querySelectorAll(".lang-opt").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          applyLanguage(btn.dataset.lang);
-          langDropdown.classList.remove("show");
-        });
-      });
-
-      // =========================
-      // PHOTO LIGHTBOX
-      // =========================
-
-      const photo = document.getElementById("profilePhoto");
-      const photoHint = document.getElementById("photoHint");
-      const lightbox = document.getElementById("photoLightbox");
-      const lightboxBack = document.getElementById("lightboxBackdrop");
-      const lightboxBtn = document.getElementById("lightboxClose");
-
-      function openLightbox() {
-        lightbox.classList.add("show");
-        document.body.style.overflow = "hidden";
-        photoHint.textContent = i18n[currentLang].zoomOut;
-      }
-
-      function closeLightbox() {
-        lightbox.classList.remove("show");
-        document.body.style.overflow = "";
-        photoHint.textContent = i18n[currentLang].zoomIn;
-      }
-
-      photo.addEventListener("click", openLightbox);
-      lightboxBack.addEventListener("click", closeLightbox);
-      lightboxBtn.addEventListener("click", closeLightbox);
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeLightbox();
-      });
-
-      // =========================
-      // CONTACT MODAL
-      // =========================
-
-      const overlay = document.getElementById("contactModal");
-
-      document
-        .getElementById("contactTrigger")
-        .addEventListener("click", () => {
-          overlay.classList.add("show");
-        });
-      document.getElementById("modalClose").addEventListener("click", () => {
-        overlay.classList.remove("show");
-      });
-      overlay.addEventListener("click", (e) => {
-        if (e.target === overlay) overlay.classList.remove("show");
-      });
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") overlay.classList.remove("show");
-      });
-
-      // Prevent the "You're here" self-link from scrolling to top
-      document
-        .querySelector(".project-self")
-        .addEventListener("click", (e) => e.preventDefault());
-
-      // =========================
-      // DARK / LIGHT THEME
-      // =========================
-
-      const THEME_KEY = "sutaTheme";
-      let currentTheme = localStorage.getItem(THEME_KEY) || "dark";
-
-      function applyTheme(theme) {
-        document.documentElement.setAttribute("data-theme", theme);
-        const btn = document.getElementById("themeToggle");
-        if (btn) btn.textContent = theme === "dark" ? "☀️" : "🌙";
-        localStorage.setItem(THEME_KEY, theme);
-        currentTheme = theme;
-      }
-
-      document.getElementById("themeToggle").addEventListener("click", () => {
-        applyTheme(currentTheme === "dark" ? "light" : "dark");
-      });
-
-      // =========================
-      // STAR FIELD
-      // =========================
-
-      function createStarField() {
-        const container = document.getElementById("starField");
-        if (!container) return;
-        const count = window.innerWidth > 768 ? 110 : 55;
-        for (let i = 0; i < count; i++) {
-          const star = document.createElement("div");
-          star.className = "star";
-          const size = Math.random() < 0.18 ? 2 : 1;
-          star.style.left = (Math.random() * 100).toFixed(2) + "%";
-          star.style.top = (Math.random() * 100).toFixed(2) + "%";
-          star.style.width = size + "px";
-          star.style.height = size + "px";
-          star.style.setProperty(
-            "--twinkle-dur",
-            (2.5 + Math.random() * 4.5).toFixed(2) + "s",
-          );
-          star.style.setProperty(
-            "--twinkle-delay",
-            (-Math.random() * 6).toFixed(2) + "s",
-          );
-          container.appendChild(star);
-        }
-      }
-
-      // =========================
-      // INIT
-      // =========================
-
-      applyTheme(currentTheme);
-      applyLanguage(currentLang);
-      createStarField();
-    </script>
-  </body>
+          </a></div></section>
+  <aside class="now-section"><span class="status-dot" aria-hidden="true"></span><div><h2 data-i18n="nowTag"><ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby>のこと</h2> <p data-i18n="statusText">AIとともに<ruby>開発<rp>（</rp><rt>かいはつ</rt><rp>）</rp></ruby>したり、<ruby>動画<rp>（</rp><rt>どうが</rt><rp>）</rp></ruby>を<ruby>編集<rp>（</rp><rt>へんしゅう</rt><rp>）</rp></ruby>したり、アニメを<ruby>楽<rp>（</rp><rt>たの</rt><rp>）</rp></ruby>しんだり。<ruby>小<rp>（</rp><rt>ちい</rt><rp>）</rp></ruby>さなアイデアから、<ruby>次<rp>（</rp><rt>つぎ</rt><rp>）</rp></ruby>のものづくりへ。</p></div><span class="now-mark" aria-hidden="true">日々</span></aside>
+ </main>
+ <footer class="site-footer"><a class="wordmark" href="#top">SUTANOLOGY</a><p data-i18n="footerCopy">ひとつのアイデアから、<ruby>新<rp>（</rp><rt>あたら</rt><rp>）</rp></ruby>しいかたちへ。</p><span>© SUTANOLOGY</span></footer>
+ <dialog id="contactModal" aria-labelledby="contactTitle"><div class="modal-box"><div class="modal-top"><span class="small-label">LET’S CONNECT</span><button id="modalClose" class="btn-text" type="button"><span data-i18n="closeLabel"><ruby>閉<rp>（</rp><rt>と</rt><rp>）</rp></ruby>じる</span> <span aria-hidden="true">×</span></button></div><h2 id="contactTitle" data-i18n="modalTitle">お<ruby>問<rp>（</rp><rt>と</rt><rp>）</rp></ruby>い<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせ</h2> <p class="modal-sub" data-i18n="modalSub">お<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>のご<ruby>相談<rp>（</rp><rt>そうだん</rt><rp>）</rp></ruby>やアイデアなど、お<ruby>気軽<rp>（</rp><rt>きがる</rt><rp>）</rp></ruby>にご<ruby>連絡<rp>（</rp><rt>れんらく</rt><rp>）</rp></ruby>ください。</p><div class="contact-list"><a class="contact-row" href="mailto:komangsuta187@gmail.com"><span data-i18n="emailLabel">メール</span><span>komangsuta187@gmail.com ↗</span></a><a class="contact-row" href="tel:07094520550"><span data-i18n="phoneLabel"><ruby>電話<rp>（</rp><rt>でんわ</rt><rp>）</rp></ruby></span><span>070-9452-0550 ↗</span></a><a class="contact-row" href="https://www.instagram.com/stillsuta_" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span>@stillsuta_ ↗</span></a></div></div></dialog>
+</body>
 </html>

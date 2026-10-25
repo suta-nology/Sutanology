@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="ja" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,17 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="project.css">
     <script src="kaigonote.js" defer></script>
   </head>
   <body class="project-case">
     <header class="case-nav">
-      <a href="index.html#projects" class="case-back"><span aria-hidden="true">←</span> <span data-case="back">Back to portfolio</span></a>
+      <a href="index.html#projects" class="case-back"><span aria-hidden="true">←</span> <span data-case="back">ポートフォリオに<ruby>戻<rp>（</rp><rt>もど</rt><rp>）</rp></ruby>る</span></a>
       <div class="case-controls">
         <select id="case-language" aria-label="Language">
           <option value="en">English</option>
           <option value="id">Indonesia</option>
-          <option value="jp">日本語</option>
+          <option value="jp" selected>日本語</option>
           <option value="zh">中文</option>
           <option value="ko">한국어</option>
         </select>
@@ -28,25 +29,25 @@
     </header>
     <main>
       <section class="case-intro">
-        <span class="tag" data-case="label">PROJECT 09 / CARE TECHNOLOGY</span>
+        <span class="tag" data-case="label">PROJECT 09 / <ruby>介護<rp>（</rp><rt>かいご</rt><rp>）</rp></ruby>テクノロジー</span>
         <h1>Kaigo<span>Note</span></h1>
-        <p class="case-lead" data-case="lead">Clearer records. More connected care.</p>
-        <p class="case-description" data-case="description">A Japanese recording workspace for short-stay care facilities, designed around a simple flow: choose a resident, record their care, and share with the team.</p>
-        <div class="case-tags"><span>HTML · CSS · JavaScript</span><span>Node.js · SQLite</span><span data-case="responsive">Responsive UI</span></div>
-        <p class="case-status"><span aria-hidden="true"></span><span data-case="status">Local prototype. This page is a visual preview, not the live care application.</span></p>
+        <p class="case-lead" data-case="lead">わかりやすい<ruby>記録<rp>（</rp><rt>きろく</rt><rp>）</rp></ruby>が、つながるケアに。</p>
+        <p class="case-description" data-case="description"><ruby>短期入所生活介護<rp>（</rp><rt>たんきにゅうしょせいかつかいご</rt><rp>）</rp></ruby>のための、<ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>の<ruby>介護<rp>（</rp><rt>かいご</rt><rp>）</rp></ruby><ruby>記録<rp>（</rp><rt>きろく</rt><rp>）</rp></ruby>ワークスペース。<ruby>利用者<rp>（</rp><rt>りようしゃ</rt><rp>）</rp></ruby>を<ruby>選<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>び、ケアを<ruby>記録<rp>（</rp><rt>きろく</rt><rp>）</rp></ruby>し、チームで<ruby>共有<rp>（</rp><rt>きょうゆう</rt><rp>）</rp></ruby>するシンプルな<ruby>流<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>れを<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>にしています。</p>
+        <div class="case-tags"><span>HTML · CSS · JavaScript</span><span>Node.js · SQLite</span><span data-case="responsive">スマートフォン<ruby>対応<rp>（</rp><rt>たいおう</rt><rp>）</rp></ruby>UI</span></div>
+        <p class="case-status"><span aria-hidden="true"></span><span data-case="status">ローカル<ruby>試作版<rp>（</rp><rt>しさくばん</rt><rp>）</rp></ruby>。このページは<ruby>画面<rp>（</rp><rt>がめん</rt><rp>）</rp></ruby>の<ruby>紹介<rp>（</rp><rt>しょうかい</rt><rp>）</rp></ruby>であり、<ruby>公開中<rp>（</rp><rt>こうかいちゅう</rt><rp>）</rp></ruby>の<ruby>介護<rp>（</rp><rt>かいご</rt><rp>）</rp></ruby>アプリではありません。</span></p>
       </section>
       <figure class="case-screenshot">
         <div class="case-window" aria-hidden="true"><span></span><span></span><span></span><small>KaigoNote / Dashboard</small></div>
         <a href="photos/kaigonote-dashboard.png" target="_blank" rel="noopener" data-case-title="enlarge" title="Open full-size preview"><img src="photos/kaigonote-dashboard.png" width="1440" height="1100" alt="KaigoNote dashboard showing fictional residents, care recording status, quick actions and team handovers."></a>
-        <figcaption data-case="caption">Dashboard preview with fictional sample data. Select the image to view it at full size.</figcaption>
+        <figcaption data-case="caption"><ruby>架空<rp>（</rp><rt>かくう</rt><rp>）</rp></ruby>のサンプルデータを<ruby>使用<rp>（</rp><rt>しよう</rt><rp>）</rp></ruby>した<ruby>画面<rp>（</rp><rt>がめん</rt><rp>）</rp></ruby>です。<ruby>画像<rp>（</rp><rt>がぞう</rt><rp>）</rp></ruby>を<ruby>選<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>ぶと<ruby>拡大表示<rp>（</rp><rt>かくだいひょうじ</rt><rp>）</rp></ruby>できます。</figcaption>
       </figure>
       <section class="case-features" aria-label="Features">
-        <article><span class="case-number">01</span><h2 data-case="recordTitle">Everyday care records</h2><p data-case="recordBody">Meals, hydration, toileting, bathing, vital signs, medication, sleep, and activities in one workspace.</p></article>
-        <article><span class="case-number">02</span><h2 data-case="teamTitle">A shared team workflow</h2><p data-case="teamBody">Staff accounts, admin permissions, editable records, and handovers with individual acknowledgements in the local version.</p></article>
-        <article><span class="case-number">03</span><h2 data-case="accessTitle">Designed for everyday use</h2><p data-case="accessBody">Bright ocean-blue colors, larger text, clear controls, and a mobile card layout for staff of different ages.</p></article>
+        <article><span class="case-number">01</span><h2 data-case="recordTitle"><ruby>毎日<rp>（</rp><rt>まいにち</rt><rp>）</rp></ruby>のケアを<ruby>記録<rp>（</rp><rt>きろく</rt><rp>）</rp></ruby></h2><p data-case="recordBody"><ruby>食事<rp>（</rp><rt>しょくじ</rt><rp>）</rp></ruby>・<ruby>水分<rp>（</rp><rt>すいぶん</rt><rp>）</rp></ruby>・<ruby>排泄<rp>（</rp><rt>はいせつ</rt><rp>）</rp></ruby>・<ruby>入浴<rp>（</rp><rt>にゅうよく</rt><rp>）</rp></ruby>・バイタル・<ruby>服薬<rp>（</rp><rt>ふくやく</rt><rp>）</rp></ruby>・<ruby>睡眠<rp>（</rp><rt>すいみん</rt><rp>）</rp></ruby>・<ruby>活動<rp>（</rp><rt>かつどう</rt><rp>）</rp></ruby>を、ひとつの<ruby>画面<rp>（</rp><rt>がめん</rt><rp>）</rp></ruby>から<ruby>記録<rp>（</rp><rt>きろく</rt><rp>）</rp></ruby>できます。</p></article>
+        <article><span class="case-number">02</span><h2 data-case="teamTitle">チームでつながる<ruby>仕組<rp>（</rp><rt>しく</rt><rp>）</rp></ruby>み</h2><p data-case="teamBody">ローカル<ruby>版<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>では<ruby>職員<rp>（</rp><rt>しょくいん</rt><rp>）</rp></ruby>アカウント、<ruby>管理者権限<rp>（</rp><rt>かんりしゃけんげん</rt><rp>）</rp></ruby>、<ruby>記録<rp>（</rp><rt>きろく</rt><rp>）</rp></ruby>の<ruby>修正<rp>（</rp><rt>しゅうせい</rt><rp>）</rp></ruby>、<ruby>職員<rp>（</rp><rt>しょくいん</rt><rp>）</rp></ruby>ごとの申し送り<ruby>確認<rp>（</rp><rt>かくにん</rt><rp>）</rp></ruby>に<ruby>対応<rp>（</rp><rt>たいおう</rt><rp>）</rp></ruby>しています。</p></article>
+        <article><span class="case-number">03</span><h2 data-case="accessTitle"><ruby>日々<rp>（</rp><rt>ひび</rt><rp>）</rp></ruby>の<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いやすさを<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>に</h2><p data-case="accessBody"><ruby>明<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>るいブルー、大きな<ruby>文字<rp>（</rp><rt>もじ</rt><rp>）</rp></ruby>、わかりやすいボタン。<ruby>幅広<rp>（</rp><rt>はばひろ</rt><rp>）</rp></ruby>い<ruby>年齢<rp>（</rp><rt>ねんれい</rt><rp>）</rp></ruby>の<ruby>職員<rp>（</rp><rt>しょくいん</rt><rp>）</rp></ruby>に<ruby>向<rp>（</rp><rt>む</rt><rp>）</rp></ruby>けた、スマートフォンのカード<ruby>表示<rp>（</rp><rt>ひょうじ</rt><rp>）</rp></ruby>も<ruby>用意<rp>（</rp><rt>ようい</rt><rp>）</rp></ruby>しています。</p></article>
       </section>
-      <section class="case-next"><div><h2 data-case="nextTitle">Explore the care company website</h2><p data-case="nextBody">KOMOREBIEN is the live Japanese–English care website, with a warm visual identity and simple navigation.</p></div><a href="https://komorebi-care.web.app/" class="btn-primary" target="_blank" rel="noopener noreferrer"><span data-case="visit">Visit KOMOREBIEN</span> <span aria-hidden="true">↗</span></a></section>
+      <section class="case-next"><div><h2 data-case="nextTitle"><ruby>介護施設<rp>（</rp><rt>かいごしせつ</rt><rp>）</rp></ruby>のウェブサイトを<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>る</h2><p data-case="nextBody">こもれび苑は、<ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>・<ruby>英語<rp>（</rp><rt>えいご</rt><rp>）</rp></ruby>に<ruby>対応<rp>（</rp><rt>たいおう</rt><rp>）</rp></ruby>した<ruby>公開中<rp>（</rp><rt>こうかいちゅう</rt><rp>）</rp></ruby>の<ruby>介護施設<rp>（</rp><rt>かいごしせつ</rt><rp>）</rp></ruby>サイト。<ruby>温<rp>（</rp><rt>あたた</rt><rp>）</rp></ruby>かなデザインとシンプルな<ruby>案内<rp>（</rp><rt>あんない</rt><rp>）</rp></ruby>を<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>にしています。</p></div><a href="https://komorebi-care.web.app/" class="btn-primary" target="_blank" rel="noopener noreferrer"><span data-case="visit">こもれび苑を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>る</span> <span aria-hidden="true">↗</span></a></section>
     </main>
-    <footer class="case-footer"><a href="index.html#projects" class="case-creator"><span class="case-creator-mark" aria-hidden="true">S</span><span>Made by <strong>Sutanology</strong></span><span aria-hidden="true">↗</span></a><span data-case="footer">Built around the people who use it.</span></footer>
+    <footer class="case-footer"><a href="index.html#projects" class="case-creator"><span class="case-creator-mark" aria-hidden="true">S</span><span>Made by <strong>Sutanology</strong></span><span aria-hidden="true">↗</span></a><span data-case="footer"><ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>う<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>に<ruby>寄<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>り<ruby>添<rp>（</rp><rt>そ</rt><rp>）</rp></ruby>うデザインを。</span></footer>
   </body>
 </html>
